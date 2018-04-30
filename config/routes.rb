@@ -18,9 +18,11 @@ get '/', to: 'landing#index'
       member do
         get :delete
       end
-    end
+  end
 
-
+  get '/logout', to: 'users#logout'
+ get '/login', to: 'users#login'
+ post '/login', to: 'users#login_attempt'
 
 
 

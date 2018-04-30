@@ -1,4 +1,6 @@
 <main role="main">
+  <%= render template: "layouts/alerts" %>
+
 
   <section class="jumbotron text-center">
     <div class="container">
@@ -10,6 +12,8 @@
 
           <!--Asks for register-->
           <%= link_to 'Register Now', {:controller => "users", :action => "new"}, :class => "btn btn-success my-2" %>
+          <span class="small-or">or</span>
+          <%= link_to 'Login', {:controller => "users", :action => "login"}, :class => "btn btn-primary my-2" %>
 
         <% else %>
           <!--IF USER IS LOGGED IN...-->

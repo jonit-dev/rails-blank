@@ -1,0 +1,32 @@
+<div class="container internal-page">
+
+  <div class="col-md-12">
+    <h2>Login</h2>
+    <hr>
+    <%= render template: "layouts/alerts" %>
+
+     <%= form_tag(login_path, :method => :post) do %>
+
+             <p>Please, fill your information below to login:</p>
+
+             <div class="form-group">
+               <%= label_tag(:email) %>
+               <%= text_field_tag(:email, params[:email], :class => "form-control", :placeholder => "Your e-mail") %>
+             </div>
+
+             <div class="form-group">
+               <%= label_tag(:password) %>
+               <%= password_field_tag(:password, params[:password], :class => "form-control", :placeholder => "Password") %>
+             </div>
+
+             <%= submit_tag("Login", :class => "btn btn-primary") %>
+
+           <% end %>
+
+
+
+
+  </div>
+
+
+</div>

@@ -32,7 +32,6 @@ class UsersController < ApplicationController
         flash.now[:style] = "success"
 
 
-
         render("landing/index")
 
       end
@@ -48,6 +47,61 @@ class UsersController < ApplicationController
 
     end
 
+
+  end
+
+  def login
+
+  end
+
+  def login_attempt
+
+    #find the user in database
+    @user = User.where(:email => params[:email]).first
+
+    if @user.blank?
+
+      #user not found case
+      flash.now[:notice] = "Your username or password was incorrect. Try again"
+      flash.now[:style] = "danger"
+
+      render("users/login")
+
+    else
+      #if user was found, lets authenticate him!
+
+      if @user.authenticate(params[:password]) === false
+
+        #password incorrect
+        flash.now[:notice] = "Your username or password was incorrect. Try again"
+        flash.now[:style] = "danger"
+
+        render("users/login")
+
+      else
+        #login user
+        session[:user_id] = @user.id
+
+        #password incorrect
+        flash.now[:notice] = "You're logged in! Welcome back #{@user.name}"
+        flash.now[:style] = "success"
+        render("landing/index")
+
+      end
+
+
+    end
+
+  end
+
+  def logout
+
+    session[:user_id] = nil
+
+    flash.now[:notice] = "You're now logged out."
+    flash.now[:style] = "warning"
+
+    render("landing/index")
 
   end
 
