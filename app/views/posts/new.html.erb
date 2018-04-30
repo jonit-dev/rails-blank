@@ -1,0 +1,24 @@
+<div class="container internal-page">
+  <h2>Create your new post</h2>
+
+  <hr>
+
+  <%= render template: "layouts/alerts" %>
+
+  <%= form_for(@post) do |f| %>
+
+    <div class="form-group">
+      <%= f.label(:title, "Title") %>
+      <%= f.text_field(:title, :class => "form-control", :placeholder => "Post Title") %>
+    </div>
+    <div class="form-group">
+      <%= f.label(:body, "Body") %>
+      <%= f.text_area(:body, :class => "form-control", :placeholder => "Your post content") %>
+    </div>
+
+
+    <%= f.submit("Create post", :class => "btn btn-primary") %>
+  <% end %>
+
+
+</div>

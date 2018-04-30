@@ -1,0 +1,19 @@
+<!--SESSION MESSAGING-->
+<% if !flash[:notice].blank? %>
+
+
+  <!--If no style was specified, just use a default info style-->
+  <% if flash[:style].blank? %>
+    <div class="alert alert-info" role="alert">
+      <%= flash[:notice] %>
+    </div>
+  <% else %>
+    <!--If it was specified, use what we passed through :style-->
+    <div class="alert alert-<%= flash[:style] %>" role="alert">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
+
+
+<% end %>

@@ -3,6 +3,15 @@ Rails.application.routes.draw do
 
 root 'landing#index'
 
+get '/', to: 'landing#index'
+
+    resources :posts do
+        member do
+          get :delete
+        end
+      end
+
+
 
 
 

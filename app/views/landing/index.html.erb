@@ -1,16 +1,40 @@
-<script type="text/javascript" charset="utf-8">
+<main role="main">
 
-  $(document).ready(function(){
-      console.log("jquery lock and loaded")
-  })
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Blog Example</h1>
+      <p class="lead text-muted">This blog was made just to tie together all of my Rails study concepts.</p>
+      <p>
+
+        <%= link_to 'Create new Post', {:controller => "posts", :action => "new"}, :class => "btn btn-primary my-2" %>
+
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <!--<div class="col-md-4">-->
+        <!--<div class="card mb-4 box-shadow">-->
+        <!--<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">-->
+        <!--<div class="card-body">-->
+        <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+        <!--<div class="d-flex justify-content-between align-items-center">-->
+        <!--<div class="btn-group">-->
+        <!--<button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+        <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+        <!--</div>-->
+        <!--<small class="text-muted">9 mins</small>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
 
 
-</script>
-
-<div class="container">
-  <div class="col-md-12">
-    <div class="jumbotron">
-      <h1>Hello World!!!</h1>
+      </div>
     </div>
   </div>
-</div>
+
+</main>
