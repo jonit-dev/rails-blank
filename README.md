@@ -1,24 +1,22 @@
-# README
+# Ruby Blank
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a blank ruby application to speed up your development.
 
-Things you may want to cover:
+It already has some useful and common project setup already configured, so you don't have to waste your precious time.
 
-* Ruby version
+Already configured:
 
-* System dependencies
+- yarn
+- mysql
+- bootstrap 4
+- jquery
 
 * Configuration
 
-* Database creation
+- Please, configure your mySQL database connection in config/database.yml, specially your socket connection.
 
-* Database initialization
+then run
 
-* How to run the test suite
+rails db:schema:dump
+ 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
