@@ -2,7 +2,7 @@
 
 This is a blank ruby application to speed up your development.
 
-It already has some useful and common project setup already configured, so you don't have to waste your precious time.
+It already has some useful and common project setup already configured, so you don't have to waste your precious time in repetitive tasks.
 
 Already configured:
 
@@ -13,7 +13,9 @@ Already configured:
 
 * Configuration
 
-- Please, configure your mySQL database connection in config/database.yml, specially your socket connection.
+- run: yarn install
+
+- Configure your mySQL database connection in config/database.yml, specially your socket connection.
 
 then run
 
