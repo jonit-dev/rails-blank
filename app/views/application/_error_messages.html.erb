@@ -1,0 +1,20 @@
+<% if object && object.errors.size > 0 %>
+
+  <div class="alert alert-danger" role="alert">
+
+    <p>
+      <strong>Some <%= pluralize(object.errors.size, "error") %> occurred while trying to perform this action:</strong>
+    </p>
+
+    <ul class="error-list">
+      <% object.errors.full_messages.each do |msg| %>
+
+        <li><%= msg %></li>
+
+      <% end %>
+    </ul>
+
+  </div>
+
+<% end %>
+

@@ -7,6 +7,8 @@
 
   <%= form_for(@post) do |f| %>
 
+    <%= error_messages_for(f.object) %>
+
     <div class="form-group">
       <%= f.label(:title, "Title") %>
       <%= f.text_field(:title, :class => "form-control", :placeholder => "Post Title") %>

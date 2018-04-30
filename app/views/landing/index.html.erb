@@ -6,7 +6,18 @@
       <p class="lead text-muted">This blog was made just to tie together all of my Rails study concepts.</p>
       <p>
 
-        <%= link_to 'Create new Post', {:controller => "posts", :action => "new"}, :class => "btn btn-primary my-2" %>
+        <% if session[:user_id].blank? %> <!--IF USER IS NOT LOGGED IN-->
+
+          <!--Asks for register-->
+          <%= link_to 'Register Now', {:controller => "users", :action => "new"}, :class => "btn btn-success my-2" %>
+
+        <% else %>
+          <!--IF USER IS LOGGED IN...-->
+          <%= link_to 'Create new Post', {:controller => "posts", :action => "new"}, :class => "btn btn-primary my-2" %>
+
+
+        <% end %>
+
 
       </p>
     </div>
